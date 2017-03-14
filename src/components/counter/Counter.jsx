@@ -23,7 +23,7 @@ export default class Counter extends Component {
     const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, redirect} = this.props;
     
     return (
-      <p style={{color: color}}>
+      <span style={{color: color}}>
         Clicked: {counter} times
         {' '}
         <button onClick={increment}>+</button>
@@ -36,7 +36,7 @@ export default class Counter extends Component {
           <button onClick={greenColor}>green</button>
           <button onClick={(e)=> this.gotoRepos(e)}>gotoRepos</button>
         </p>
-      </p>
+      </span>
       
     );
   }

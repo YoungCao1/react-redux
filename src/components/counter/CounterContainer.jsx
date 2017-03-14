@@ -22,4 +22,4 @@ function select(state) {
 
   };
 }
-export default connect(select)(Counter);
+export default connect(select)(CounterApp);
