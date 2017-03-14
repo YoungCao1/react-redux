@@ -12,7 +12,7 @@ class App extends Component {
               <NavLink to="/tacos">Tacos</NavLink>
             </li>
             <li>
-              <NavLink to="/sandwiches">Sandwiches</NavLink>
+              <NavLink to="/sandwiches">Sandwichessadfdsf</NavLink>
             </li>
           </ul>
         </div>
