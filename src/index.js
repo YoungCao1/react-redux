@@ -24,7 +24,8 @@ if (module.hot) {
     render(
       <AppContainer>
         <RootContainer
-          store={ store } history={ history }
+          store={ store }
+          history={ history }
         />
       </AppContainer>,
       document.getElementById('root')

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-
 export default class Counter extends Component {
   static propTypes = {
     increment: PropTypes.func.isRequired,
@@ -23,9 +22,9 @@ export default class Counter extends Component {
     const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, redirect} = this.props;
     
     return (
-      <span style={{color: color}}>
+      <div style={{color: color}}>
         Clicked: {counter} times
-        {' '}
+        baccadsfasdf
         <button onClick={increment}>+</button>
         {' '}
         <button onClick={decrement}>-</button>
@@ -36,7 +35,7 @@ export default class Counter extends Component {
           <button onClick={greenColor}>green</button>
           <button onClick={(e)=> this.gotoRepos(e)}>gotoRepos</button>
         </p>
-      </span>
+      </div>
       
     );
   }

@@ -1,24 +1,12 @@
-# Redux DevTools Counter example
+# FreeWork example
 
 ## Running Example
 
 First, clone the project:
 
 ```
-git clone https://github.com/gaearon/redux-devtools.git
+git clone https://github.com/VonCheng/ReactFreework.git
 ```
-
-Then install the dependencies in the root folder:
-
-```
-cd redux-devtools
-npm install
-```
-
-Install the dependencies in the example folder:
-
-```
-cd examples/counter
 npm install
 ```
 

@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66c611f2-d3a7-433a-9067-56bcef6f1410" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/common/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/components/navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/index.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.babelrc" afterPath="$PROJECT_DIR$/.babelrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ReactFreework.iml" afterPath="$PROJECT_DIR$/.idea/ReactFreework.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/counter/Counter.jsx" afterPath="$PROJECT_DIR$/src/components/counter/Counter.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/counter/CounterContainer.jsx" afterPath="$PROJECT_DIR$/src/components/counter/CounterContainer.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Root.dev.jsx" afterPath="$PROJECT_DIR$/src/containers/Root.dev.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Root.prod.jsx" afterPath="$PROJECT_DIR$/src/containers/Root.prod.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/App.jsx" afterPath="$PROJECT_DIR$/src/pages/App.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Sandwiches.jsx" afterPath="$PROJECT_DIR$/src/pages/Sandwiches.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/BaseSubRoute.jsx" afterPath="$PROJECT_DIR$/src/router/BaseSubRoute.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/routes.js" afterPath="$PROJECT_DIR$/src/router/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="ReactFreework.iws" />
@@ -35,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -57,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sandwiches.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sandwiches.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Sandwiches.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -73,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/router/BaseSubRoute.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,7 +100,7 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="195">
               <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding />
             </state>
@@ -163,9 +161,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/styles/index.less" />
         <option value="$PROJECT_DIR$/src/components/common/navbar.js" />
-        <option value="$PROJECT_DIR$/src/pages/App.jsx" />
         <option value="$PROJECT_DIR$/src/router/BaseSubRoute.jsx" />
         <option value="$PROJECT_DIR$/src/pages/Sandwiches.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/App.jsx" />
       </list>
     </option>
   </component>
@@ -452,18 +450,18 @@
       <option name="presentableId" value="Default" />
       <updated>1489399248355</updated>
       <workItem from="1489399249657" duration="12750000" />
-      <workItem from="1489469265563" duration="8119000" />
+      <workItem from="1489469265563" duration="8219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20869000" />
+    <option name="totallyTimeSpent" value="20969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1510" y="-553" width="1105" height="751" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25184503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25184503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -799,7 +797,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/router/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="195">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
@@ -831,20 +829,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/BaseSubRoute.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -855,6 +843,16 @@
           <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

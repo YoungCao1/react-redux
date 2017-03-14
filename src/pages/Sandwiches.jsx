@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CounterApp from '../components/counter/CounterContainer.jsx';
+import CounterApp from '../components/counter/CounterContainer';
 class Sandwiches extends Component {
     
     render() {

@@ -11,6 +11,14 @@ class App extends Component {
   render() {
     return (
       <div>
+          <ul>
+              <li>
+                  <NavLink to="/tacos">Tacos</NavLink>
+              </li>
+              <li>
+                  <NavLink to="/sandwiches">Sandwichessadfdsf</NavLink>
+              </li>
+          </ul>
 
           <Navbar />
 
