@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import CounterApp from '../components/counter/CounterContainer';
 class Sandwiches extends Component {
+    
     render() {
         return (
             <div>
-                <h2>Sandwichesas</h2>
+                <h2>Sandwiches</h2>
                 <CounterApp />
             </div>
             

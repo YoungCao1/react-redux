@@ -8,7 +8,7 @@ class CounterApp extends Component {
   render() {
     const { counter, dispatch , color} = this.props;
     return (
-      <Counter counter={counter} color={color}
+      <Counter counter={counter} color={color} dispatch = {dispatch}
                {...bindActionCreators(CounterActions, dispatch)} />
     );
   }
@@ -19,6 +19,7 @@ function select(state) {
     counter: state.counter,
     color: state.changeColor,
     redirect: state.redirect
+
   };
 }
-export default connect(select)(CounterApp);
+export default connect(select)(Counter);
