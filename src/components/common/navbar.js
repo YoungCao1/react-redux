@@ -9,8 +9,6 @@ export default class Navbar extends Component {
 
     hoverLi(e,length){
 
-        console.log($(e.target).parent());
-        console.log(length)
         var withs = length*116+'px';
 
         $('.dropdown-toggle').removeClass('activeA');
