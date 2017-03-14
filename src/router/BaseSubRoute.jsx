@@ -10,7 +10,7 @@ import React, {Component} from 'react';
     }
 }*/
 
-export const BaseSubRouteConnent = (Component) => {return class extends Component {
+export const BaseSubRouteConnent = (Component, childrenName) => {return class extends Component {
     constructor(props) {
         super(props);
     }
@@ -21,7 +21,8 @@ export const BaseSubRouteConnent = (Component) => {return class extends Componen
         } = this.props;
         return (
             <div>
-                <Component {...props} /> {children}
+                <Component {...props} /> 
+                <div className={childrenName}>{children}</div>
             </div>
         );
     }

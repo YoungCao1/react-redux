@@ -11,22 +11,10 @@ class App extends Component {
   render() {
     return (
       <div>
-          <ul>
-              <li>
-                  <NavLink to="/tacos">Tacos</NavLink>
-              </li>
-              <li>
-                  <NavLink to="/sandwiches">Sandwichessadfdsf</NavLink>
-              </li>
-          </ul>
-
           <Navbar />
-
       </div>
-
-
     );
   }
 }
-module.exports = BaseSubRouteConnent(App);
+module.exports = BaseSubRouteConnent(App, 'mainView' );
 // export default App;
