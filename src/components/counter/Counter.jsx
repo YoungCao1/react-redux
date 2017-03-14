@@ -13,10 +13,12 @@ export default class Counter extends Component {
   };
 
   gotoRepos() {
-      this.props.redirect('repos');
-      // this.props.dispatch("repos")
-      console.log(this.props)
-    }
+      // this.props.redirect('repos');
+      // this.props.dispatch({
+      //     type: 'INCREMENT_COUNTER'
+      // })
+      // console.log(this.props)
+  }
   render() {
     const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, redirect} = this.props;
     

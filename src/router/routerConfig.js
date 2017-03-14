@@ -1,11 +1,12 @@
 export const routerConfig = [{
   path: '/',
   component: 'App',
-  routes: [{
+  routes: [
+     {
       path: '/sandwiches',
       component: 'Sandwiches'
     },
-    {
+     {
       path: '/tacos',
       component: 'Tacos',
       routes: [{
