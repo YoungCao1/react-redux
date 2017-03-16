@@ -1,9 +1,9 @@
 export const routerConfig = [{
   path: '/',
   component: 'App',
-  // indexRoute: {
-  //   redirect: '/tacos/bus'
-  // },
+  indexRoute: {
+    redirect: '/cart'
+  },
   childRoutes: [{
     path: '/tacos',
     component: "Tacos",
@@ -17,5 +17,8 @@ export const routerConfig = [{
   }, {
     path: '/sandwiches',
     component: 'Sandwiches'
+  },{
+    path: '/cart',
+    component: "Cart",
   }]
 }]

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import NavLink from './NavLink';
-
 import '../../styles/components/navbar.less';
-import NavLink from '../../pages/NavLink'
 
 export default class Navbar extends Component {
     pointerleave(){
