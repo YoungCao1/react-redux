@@ -1,24 +1,16 @@
 import React, {Component} from 'react';
-import NavLink from './NavLink'
-import {BaseSubRouteConnent} from '../router/BaseSubRoute';
+import Nav from '../components/common/navbar'
+import {BaseSubRouteConnent, BaseParentRouteConnent} from '../router/BaseComponent';
+import '../styles/mainView';
 
+@BaseParentRouteConnent
 class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <ul>
-            <li>
-              <NavLink to="/tacos">Tacos</NavLink>
-            </li>
-            <li>
-              <NavLink to="/sandwiches">Sandwichess</NavLink>
-            </li>
-          </ul>
-        </div>
+        <Nav />
       </div>
     );
   }
 }
-module.exports = BaseSubRouteConnent(App);
-// export default App;
+module.exports = App;

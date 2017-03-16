@@ -5,6 +5,7 @@ class Cart extends Component {
         return (
             <div>
                 Cart
+                <input type="text"/>
             </div>
         );
     }

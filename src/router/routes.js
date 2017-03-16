@@ -12,7 +12,7 @@ const transformConfig = (routes) => {
       if (route.component) {
           route.component = require(`../pages/${route.component}`);
           if(route.indexRoute) {
-            route.indexRoute.onEnter = (nextState, replace) => replace(route.indexRoute.to) 
+            route.indexRoute.onEnter = (nextState, replace) => replace(route.indexRoute.redirect) 
           }
       }
     })
