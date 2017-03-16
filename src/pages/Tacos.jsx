@@ -19,5 +19,5 @@ class Tacos extends Component {
         );
     }
 }
-module.exports = BaseSubRouteConnent(Tacos);
+module.exports = BaseSubRouteConnent(Tacos, 'thirdChildren');
 // export default Tacos;

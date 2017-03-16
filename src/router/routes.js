@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
-import {Route, Router, IndexRoute} from 'react-router';
+import {Route, Router, IndexRoute, Redirect} from 'react-router';
 import {routerConfig} from './routerConfig';
 // import {FadingRoute} from './FadingRoute';   vonvenient inline rendering
 
 const transformConfig = (routes) => {
   const deepLoop = (routes) => {
     routes.map((route, i) => {
-      if (route.routes) {
+      if (route.childRoutes) {
+        deepLoop(route.childRoutes)
+      }
+      if (route.component) {
           route.component = require(`../pages/${route.component}`);
-        deepLoop(route.routes)
-      } else {
-          route.component = require(`../pages/${route.component}`);
+          if(route.indexRoute) {
+            route.indexRoute.onEnter = (nextState, replace) => replace(route.indexRoute.to) 
+          }
       }
     })
   }
@@ -20,33 +23,25 @@ const transformConfig = (routes) => {
 
 const RouteWithSubRoutes = (route) => {
   if (route.routes) {
-    if (route.indexRoute) {
-      return <IndexRoute key={route.indexRoute} component={route.component}>
-                {route.routes.map((route) => (RouteWithSubRoutes(route)))}
-              </IndexRoute >
-    } else {
-      return <Route  key={route.path} path={route.path} component={route.component}>
+      return <Route key={route.path} path={route.path} component={route.component}>
                 {route.routes.map((route) => (RouteWithSubRoutes(route)))}
               </Route >
-    }
     
   } else {
     if (route.indexRoute) {
-      return <IndexRoute key={route.indexRoute} component={route.component}/>
+      return <IndexRoute key={new Date()} component={route.component}/>
     } else {
-      return <Route key={route.path} path={route.path} component={route.component}/>
+      <Route key={route.path} path={route.path} component={route.component}/>
     }
-    
   }
 }
+// transformConfig(routerConfig).map((route, i) => (RouteWithSubRoutes(route)))
 export default class RouterTree extends Component {
     render() {
       const {history} = this.props;
         return (
-            <Router history={history}>
-                {transformConfig(routerConfig).map((route, i) => (RouteWithSubRoutes(route)))}
-            </Router>
-            
+            <Router routes={transformConfig(routerConfig)} history={history}>
+            </Router>  
         );
     }
 }
