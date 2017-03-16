@@ -1,32 +1,9 @@
-// export const routerConfig = [{
-//   path: '/',
-//   component: 'App',
-//   routes: [{
-//       path: '/tacos',
-//       component: 'Tacos',
-//       routes: [{
-//         path: '/tacos/cart',
-//         component: 'Cart'
-//       }, {
-//         path: '/tacos/bus',
-//         component: 'Bus',
-//         routes: [{
-//           redirect: true,
-//           from: '/tacos/bus',
-//           to: '/tacos/cart'
-//         }, ]
-//       }]
-//     }
-
-//   ]
-// }];
-
 export const routerConfig = [{
   path: '/',
   component: 'App',
-  indexRoute: {
-    to: '/tacos/bus'
-  },
+  // indexRoute: {
+  //   redirect: '/tacos/bus'
+  // },
   childRoutes: [{
     path: '/tacos',
     component: "Tacos",
@@ -37,5 +14,8 @@ export const routerConfig = [{
       path: '/tacos/cart',
       component: 'Cart'
     }]
+  }, {
+    path: '/sandwiches',
+    component: 'Sandwiches'
   }]
 }]

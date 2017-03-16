@@ -5,6 +5,7 @@ class Bus extends Component {
         return (
             <h3>
                 Bus
+                <input type="text"/>
             </h3>
         );
     }

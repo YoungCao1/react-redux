@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import NavLink from './NavLink';
+
 import '../../styles/components/navbar.less';
 import NavLink from '../../pages/NavLink'
 
@@ -49,6 +51,7 @@ export default class Navbar extends Component {
                                         <span> asdsad</span>
                                     </div>
                                     <ul className="submenu" >
+
                                         <li  className="singleLine"><NavLink to="/tacos/bus" onClick={this.clickHref} className="jumpNavlist"> sacac </NavLink> </li>
                                         <li  className="singleLine"><NavLink to="/"onClick={this.clickHref} className="jumpNavlist"> 测测 </NavLink> </li>
 

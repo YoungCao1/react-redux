@@ -52,7 +52,6 @@ class Cart extends React.Component {
         };
         const hasSelected = selectedRowKeys.length > 0;
         return (
-
             <div >
                 <WrappedAdvancedSearchForm />
                 <div style={{ marginBottom: 16 }}>
