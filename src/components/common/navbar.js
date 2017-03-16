@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../styles/components/navbar.less';
+import NavLink from '../../pages/NavLink'
 
 export default class Navbar extends Component {
     pointerleave(){
@@ -20,7 +21,8 @@ export default class Navbar extends Component {
 
     }
     clickHref(){
-
+        $('.submenuDiv').css('display','none');
+        $('.dropdown-toggle').removeClass('activeA');
     }
 
     render() {
@@ -30,7 +32,7 @@ export default class Navbar extends Component {
                 <div  className="title " >
                     <a  >
 
-                        <img src="common/img/222.jpg"/>
+                        <img src="../../../assets/images/222.jpg"/>
                     </a>
                 </div>
                 <section className="" onMouseLeave={this.pointerleave}>
@@ -47,8 +49,8 @@ export default class Navbar extends Component {
                                         <span> asdsad</span>
                                     </div>
                                     <ul className="submenu" >
-                                        <li  className="singleLine"><a href="/index" onClick={this.clickHref} className="jumpNavlist"> sacac </a> </li>
-                                        <li  className="singleLine"><a onClick={this.clickHref} className="jumpNavlist"> 测测 </a> </li>
+                                        <li  className="singleLine"><NavLink to="/tacos/bus" onClick={this.clickHref} className="jumpNavlist"> sacac </NavLink> </li>
+                                        <li  className="singleLine"><NavLink to="/"onClick={this.clickHref} className="jumpNavlist"> 测测 </NavLink> </li>
 
                                     </ul>
                                     <div className="dashLine"></div>
