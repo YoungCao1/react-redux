@@ -40,8 +40,7 @@ export default class RouterTree extends Component {
     render() {
       const {history} = this.props;
         return (
-            <Router routes={transformConfig(routerConfig)} history={history}>
-            </Router>  
+            <Router  routes={transformConfig(routerConfig)} history={history} />
         );
     }
 }

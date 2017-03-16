@@ -32,7 +32,7 @@ export default class Navbar extends Component {
                 <div  className="title " >
                     <a  >
 
-                        <img src="../../../assets/images/222.jpg"/>
+                        <img src="/src/assets/images/222.jpg"/>
                     </a>
                 </div>
                 <section className="" onMouseLeave={this.pointerleave}>

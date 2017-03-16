@@ -14,5 +14,6 @@ Finally, run the project:
 
 ```
 npm start
-open http://localhost:3000
 ```
+open http://localhost:3000
+
