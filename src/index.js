@@ -9,8 +9,6 @@ import { tabBarIncrement } from './actions/commonAction';
 import {greenColor} from './actions/CounterActions';
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
-let tabBarHistory = [];
-
 history.listen(location=>{
   if(location.state&&location.state.mark) {
     store.dispatch(tabBarIncrement(location))

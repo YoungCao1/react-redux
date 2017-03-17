@@ -13,7 +13,8 @@ export const routerConfig = [{
       component: 'Bus'
     }, {
       path: '/tacos/cart/:user',
-      component: 'Cart'
+      component: 'Cart',
+      mark: '淘宝'
     }]
   }, {
     path: '/sandwiches',
