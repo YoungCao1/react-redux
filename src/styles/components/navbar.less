@@ -6,7 +6,7 @@
   background-color: #1e2736;
   height: 100%;
   transition: transform .2s ease-in-out,width .2s ease-in-out;
-
+  top: 0px;
   .title {
     //background-image: url("");
     background-repeat:no-repeat;
@@ -26,7 +26,7 @@
     padding-top: 16px;
   }
 
-  .nav {
+   .nav {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -189,6 +189,17 @@
 
   }
 
+
+    .sider-toggle{
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
+      cursor: pointer;
+      height: 30px;
+      color: #fff;
+      font-size: 15px;
+    }
 }
 
 .packNavbar {
@@ -196,7 +207,7 @@
   position: fixed;
   z-index: 100;
   background-color: #1e2736;
-  height: 150%;
+  height: 100%;
   transition: transform .2s ease-in-out,width .2s ease-in-out;
 
   .title {
@@ -251,7 +262,7 @@
           display: inline-block;
           //vertical-align: middle;
           text-align: center;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: normal;
           margin-right: 2px;
           height: 51px;
@@ -362,26 +373,18 @@
       }
 
 
-
-
-
-
     }
-
-
   }
 
+
+  .sider-toggle{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    cursor: pointer;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+  }
 }
-.main-header > .navbar {
-  margin-left: 140px;
-}
-#wrapper {
-  margin-left: 140px;
-}
-.sidenav-iconfont.reconciliation:after {
-  /*对账*/
-  content: "\1004";
-}
-//.sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .right-side, .sidebar-mini.sidebar-collapse .main-footer {
-//  margin-left: 140px!important
-//}

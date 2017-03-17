@@ -54,17 +54,6 @@ class AdvancedSearchForm extends React.Component {
                 <Row gutter={40}>
                     {children.slice(0, shownCount)}
                 </Row>
-                <Row>
-                    <Col span={24} style={{ textAlign: 'right' }}>
-                        <Button type="primary" htmlType="submit">Search</Button>
-                        <Button style={{ marginLeft: 8 }} onClick={this.handleReset}>
-                            Clear
-                        </Button>
-                        <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-                            Collapse <Icon type={expand ? 'up' : 'down'} />
-                        </a>
-                    </Col>
-                </Row>
             </Form>
         );
     }

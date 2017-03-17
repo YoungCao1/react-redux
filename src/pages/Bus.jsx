@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-
+import { Form, Row, Col, Input, Button, Icon } from 'antd';
+const FormItem = Form.Item;
 class Bus extends Component {
+
+    
     render() {
         return (
             <h3>

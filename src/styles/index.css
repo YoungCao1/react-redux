@@ -76,6 +76,7 @@ acronym {
 }
 body {
   background: #fff;
+  overflow-x: hidden;
 }
 body .App-childRoutes {
   width: 100%;
