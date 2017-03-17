@@ -36,9 +36,10 @@ export default class Navbar extends Component {
         });
        if(this.state.collapsed){
            $('.App-childRoutes').css('padding-left','160px');
+           $('.tabBarLocations').css('margin-left','140px');
        } else {
            $('.App-childRoutes').css('padding-left','70px');
-
+           $('.tabBarLocations').css('margin-left','50px');
        }
     }
 
