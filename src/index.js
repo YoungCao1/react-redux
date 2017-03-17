@@ -9,6 +9,9 @@ import { syncHistoryWithStore } from 'react-router-redux'
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
+history.listen(location=>{
+  console.log(location);
+})
 render(
   <AppContainer>
     <Root

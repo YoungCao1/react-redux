@@ -29,7 +29,7 @@ export const BaseParentRouteConnent = (Target, name, descriptor) => (
                     return (
                         <div>
                             <Target {...props}/>
-                            <div className={Target.name + '-childRoutes'}>{children}</div>
+                            <div className={Target.getName() + '-childRoutes'}>{children}</div>
                         </div>
                     );
                 }
