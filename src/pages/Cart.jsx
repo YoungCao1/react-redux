@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import WrappedAdvancedSearchForm from "../components/Cart/search";
-
-
-import { Table, Icon ,Button} from 'antd';
+import SeniorSearch from "../components/Cart/seniorSearch";
+import { Table, Icon ,Button,Modal,BackTop} from 'antd';
+import Bus from './Bus';
 
 const columns = [{
     title: 'Name',
@@ -27,40 +27,55 @@ for (let i = 0; i < 46; i++) {
 
 class Cart extends React.Component {
     state = {
-        selectedRowKeys: [],  // Check here to configure the default column
-        loading: false,
-    };
-    start = () => {
-        this.setState({ loading: true });
-        // ajax request after empty completing
+        ModalText: 'Content of the modal dialog',
+        visible: false,
+    }
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    }
+    handleOk = () => {
+        this.setState({
+            ModalText: 'The modal dialog will be closed after two seconds',
+            confirmLoading: true,
+        });
         setTimeout(() => {
             this.setState({
-                selectedRowKeys: [],
-                loading: false,
+                visible: false,
+                confirmLoading: false,
             });
-        }, 1000);
+        }, 2000);
     }
-    onSelectChange = (selectedRowKeys) => {
-        console.log('selectedRowKeys changed: ', selectedRowKeys);
-        this.setState({ selectedRowKeys });
+    handleCancel = () => {
+        console.log('Clicked cancel button');
+        this.setState({
+            visible: false,
+        });
+    }
+
+    clickSearch =()=>{
+        console.log(12312);
+    }
+    clickAdd =()=>{
+        console.log('add');
+        this.showModal();
     }
     render() {
-        const { loading, selectedRowKeys } = this.state;
-        const rowSelection = {
-            selectedRowKeys,
-            onChange: this.onSelectChange,
-        };
-        const hasSelected = selectedRowKeys.length > 0;
+
         return (
             <div >
-                <WrappedAdvancedSearchForm />
-                <div style={{ marginBottom: 16 }}>
-                    <Button type="primary" onClick={this.start}
-                            disabled={!hasSelected} loading={loading}
-                    >Reload</Button>
-                    <span style={{ marginLeft: 8 }}>{hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}</span>
-                </div>
-                <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+
+                <SeniorSearch clickSearch={this.clickSearch} placeholderName="e12e21" clickAdd={this.clickAdd} details={<WrappedAdvancedSearchForm/>}/>
+                <Table  columns={columns} dataSource={data} bordered />
+                <Modal title="Title of the modal dialog"
+                       visible={this.state.visible}
+                       onOk={this.handleOk}
+                       confirmLoading={this.state.confirmLoading}
+                       onCancel={this.handleCancel}
+                >
+                    <p>{this.state.ModalText}</p>
+                </Modal>
             </div>
         );
     }

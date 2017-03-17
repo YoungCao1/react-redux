@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import NavLink from './NavLink';
+import { Icon } from 'antd';
 import '../../styles/components/navbar.less';
 
 export default class Navbar extends Component {
-    pointerleave(){
+    state = {
+        collapsed: false,
+        mode: 'appNavbar'
+    };
+    pointerleave=()=>{
         $('.submenuDiv').css('display','none');
         $('.dropdown-toggle').removeClass('activeA');
     }
 
-    hoverLi(e,length){
+    hoverLi =(e,length)=>{
+        console.log(e.target);
 
         var withs = length*116+'px';
-
         $('.dropdown-toggle').removeClass('activeA');
         $('.submenuDiv').css('display','none');
         $(e.target).parent().addClass('activeA');
@@ -20,19 +25,31 @@ export default class Navbar extends Component {
         submenuDiv.css({'display':'block','width':withs});
 
     }
-    clickHref(){
+    clickHref =()=>{
         $('.submenuDiv').css('display','none');
         $('.dropdown-toggle').removeClass('activeA');
+    };
+    siderToggle =()=>{
+        this.setState({
+            collapsed: !this.state.collapsed,
+            mode: !this.state.collapsed ? 'packNavbar ' : 'appNavbar'
+        });
+       if(this.state.collapsed){
+           $('.App-childRoutes').css('padding-left','160px');
+       } else {
+           $('.App-childRoutes').css('padding-left','70px');
+
+       }
     }
 
     render() {
 
         return (
-            <aside className="appNavbar " >
+            <aside className={this.state.mode} >
                 <div  className="title " >
                     <a  >
 
-                        <img src="../../../assets/images/222.jpg"/>
+                        <img src="/src/assets/images/222.jpg"/>
                     </a>
                 </div>
                 <section className="" onMouseLeave={this.pointerleave}>
@@ -105,6 +122,9 @@ export default class Navbar extends Component {
                         </li>
                     </ul>
                 </section>
+                <div className="sider-toggle" onClick={()=>this.siderToggle()}>
+                    <Icon type={this.state.collapsed ? 'right' : 'left'}/>
+                </div>
             </aside>
 
         );
