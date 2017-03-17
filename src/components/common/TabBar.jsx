@@ -9,7 +9,7 @@ class TabBar extends Component {
         const {tabBarLocations, tabBarDecrementAndRedirect, routing} = this.props;
         const loopTabBars = (data) => (data.map((location, i) => {
             var active = 'tabbar-normal';
-            if (routing.locationBeforeTransitions&&routing.locationBeforeTransitions.state.mark&&(routing.locationBeforeTransitions.state.mark==location.state.mark)) {
+            if (routing.locationBeforeTransitions&&routing.locationBeforeTransitions.state&&routing.locationBeforeTransitions.state.mark&&(routing.locationBeforeTransitions.state.mark==location.state.mark)) {
                 active = 'tabbar-active';
             }
             return <span className={`tabbar-cell ${active}`} key={location.state.mark}>

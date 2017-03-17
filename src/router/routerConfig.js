@@ -8,19 +8,24 @@ export const routerConfig = [{
   childRoutes: [{
     path: '/tacos',
     component: "Tacos",
+    state: {
+      mark: 'tab'
+    },
     childRoutes: [{
       path: '/tacos/bus',
       component: 'Bus'
     }, {
-      path: '/tacos/cart/:user',
-      component: 'Cart',
-      mark: '淘宝'
+      path: '/tacos/cart',
+      component: 'Cart'
     }]
   }, {
     path: '/sandwiches',
     component: 'Sandwiches'
-  },{
+  }, {
     path: '/cart',
     component: "Cart",
+    state: {
+      mark: '首页'
+    }
   }]
 }]

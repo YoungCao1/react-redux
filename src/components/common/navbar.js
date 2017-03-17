@@ -68,8 +68,8 @@ export default class Navbar extends Component {
                                     </div>
                                     <ul className="submenu" >
 
-                                        <li  className="singleLine"><NavLink to={{pathname: '/tacos/bus', search: '?name=chengpu', state: { mark: "sacac" }}} onClick={this.clickHref} className="jumpNavlist"> sacac </NavLink> </li>
-                                        <li  className="singleLine"><NavLink to={{pathname: '/', state: { mark: false }}} onClick={this.clickHref} className="jumpNavlist"> 测测 </NavLink> </li>
+                                        <li  className="singleLine"><NavLink to={{pathname: '/tacos/bus', search: '?name=chengpu', state: { mark: "汽车" }}} onClick={this.clickHref} className="jumpNavlist"> 汽车 </NavLink> </li>
+                                        <li  className="singleLine"><NavLink to={{pathname: '/', state: { mark: false }}} onClick={this.clickHref} className="jumpNavlist"> 首页 </NavLink> </li>
                                     </ul>
                                     <div className="dashLine"></div>
                                 </div>
@@ -87,8 +87,8 @@ export default class Navbar extends Component {
                                         <span> asdsad</span>
                                     </div>
                                     <ul className="submenu"  >
-                                        <li  className="singleLine"><NavLink to="/sandwiches" onClick={this.clickHref} className="jumpNavlist">sacac</NavLink></li>
-                                        <li  className="singleLine"><a  onClick={this.clickHref} className="jumpNavlist"> 测测 </a> </li>
+                                        <li  className="singleLine"><NavLink to="/sandwiches" onClick={this.clickHref} className="jumpNavlist">三明治</NavLink></li>
+                                        <li  className="singleLine"><NavLink to={{pathname: '/tacos/cart', search: '?name=chengpu', state: { mark: "小汽车" }}} onClick={this.clickHref} className="jumpNavlist"> 测测 </NavLink> </li>
                                         <li  className="singleLine"><a  onClick={this.clickHref} className="jumpNavlist"> 测测 </a> </li>
                                         <li  className="singleLine"><a  onClick={this.clickHref} className="jumpNavlist"> 测测 </a> </li>
                                     </ul>

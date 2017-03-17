@@ -4,16 +4,21 @@ import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
 import { browserHistory } from 'react-router'
+import createHistory from 'history/lib/createBrowserHistory'
 import { syncHistoryWithStore } from 'react-router-redux';
 import { tabBarIncrement } from './actions/commonAction';
 import {greenColor} from './actions/CounterActions';
+import { routerConfig } from './router/routerConfig';
 const store = configureStore();
-const history = syncHistoryWithStore(browserHistory, store);
-history.listen(location=>{
-  if(location.state&&location.state.mark) {
-    store.dispatch(tabBarIncrement(location))
-  }
-})
+
+const history = syncHistoryWithStore(createHistory({
+  forceRefresh: false
+}), store);
+
+
+// history.listen(location=>{
+// })
+
 
 render(
   <AppContainer>

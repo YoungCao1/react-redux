@@ -7,8 +7,7 @@ export default class Counter extends Component {
     counter: PropTypes.number.isRequired,
     greenColor: PropTypes.func.isRequired,
     yellowColor: PropTypes.func.isRequired,
-    color: PropTypes.string.isRequired,
-    redirect: PropTypes.func.isRequired
+    color: PropTypes.string.isRequired
   };
 
   gotoRepos() {

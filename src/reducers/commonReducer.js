@@ -6,7 +6,7 @@ export default (state=[], action) => {
             for (var i = 0; i < state.length; i++) {
                 var location = state[i];
                 if(location.state.mark == action.currentLocation.state.mark) {
-                    return state
+                    return state.concat();
                 }
             }
             state.push(action.currentLocation);
