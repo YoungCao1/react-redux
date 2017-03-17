@@ -1,5 +1,4 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER , GREEN_COLOR, YELLOW_COLOR, REDIRECT} from '../constants/ActionTypes';
-import { routerMiddleware, push } from 'react-router-redux'
+import { INCREMENT_COUNTER, DECREMENT_COUNTER , GREEN_COLOR, YELLOW_COLOR} from '../constants/ActionTypes';
 
 export function increment() {
   return {
@@ -42,9 +41,4 @@ export function yellowColor() {
   return {
     type: YELLOW_COLOR
   }
-}
-export function redirect(path) {
-  return (dispatch) => {
-    dispatch(push(path));
-  };
 }

@@ -1,0 +1,130 @@
+html {
+  color: #000;
+  background: #FFF;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 12px;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+}
+body {
+  background: #fff;
+}
+body .App-childRoutes {
+  width: 100%;
+  height: 100%;
+  padding-left: 150px;
+  padding-top: 10px;
+  padding-right: 10px;
+  margin-top: 70px;
+  position: absolute;
+}
+body .app-container {
+  position: relative;
+}
+body .app-container .indexHeader {
+  width: 100%;
+  height: 50px;
+  box-shadow: none;
+  border: 0;
+  background-color: #4b4a5e;
+  /*background-image: -webkit-linear-gradient(left, #438eb9 0%, #51c6ea 100%);*/
+  /*background-image: -o-linear-gradient(left, #438eb9 0%, #51c6ea 100%);*/
+  /*background-image: linear-gradient(to right, #438eb9 0%, #51c6ea 100%);*/
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+}
+body .app-container .tabBarLocations {
+  margin-top: 50px;
+  margin-left: 140px;
+  color: black;
+  height: 50px;
+  background-color: #dfdfdf;
+}
+body .app-container .tabBarLocations .tabbar-cell {
+  display: inline-block;
+  padding: 0px 5px;
+  background-color: palegoldenrod;
+  height: 25px;
+  border-radius: 3px;
+  margin: 5px;
+}
+body .app-container .tabBarLocations .tabbar-cell a {
+  display: inline-block;
+  line-height: 25px;
+}
+body .app-container .tabBarLocations .tabbar-cell i {
+  margin-left: 5px;
+  color: #fff;
+}
+body .app-container .tabBarLocations .tabbar-active {
+  background-color: #000;
+}

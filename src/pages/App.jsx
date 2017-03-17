@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
-import {BaseSubRouteConnent, BaseParentRouteConnent} from '../router/BaseComponent';
+import {BaseParentRouteConnect} from '../router/BaseComponent';
 import IndexHeader from '../components/common/indexHeader';
 import Navbar from '../components/common/navbar';
-
+import TabBar from '../components/common/TabBar';
 import '../styles/index.less';
 import { DatePicker ,Button} from 'antd';
 
-@BaseParentRouteConnent
+@BaseParentRouteConnect
 class App extends Component {
   render() {
+    const {dispatch} = this.props;
     return (
-      <div>
+      <div className="app-container">
           <IndexHeader />
           <Navbar />
+          <TabBar />
       </div>
     );
   }
 }
+
 module.exports = App;

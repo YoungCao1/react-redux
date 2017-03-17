@@ -2,7 +2,8 @@ export const routerConfig = [{
   path: '/',
   component: 'App',
   indexRoute: {
-    redirect: '/cart'
+    redirect: '/cart',
+    mark: '首页'
   },
   childRoutes: [{
     path: '/tacos',
@@ -11,7 +12,7 @@ export const routerConfig = [{
       path: '/tacos/bus',
       component: 'Bus'
     }, {
-      path: '/tacos/cart',
+      path: '/tacos/cart/:user',
       component: 'Cart'
     }]
   }, {

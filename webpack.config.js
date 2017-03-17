@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-
+var ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
 var entry = null;
 var plugins = [
@@ -8,7 +8,12 @@ var plugins = [
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV)
     }
-  })
+  }),
+  new ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery"
+    })
 ];
 if (process.env.NODE_ENV == 'production') {
   entry = [

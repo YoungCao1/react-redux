@@ -12,10 +12,9 @@ export default class Root extends Component {
       <Provider store={store}>
         <div>
           <RouterTree history={history} />
-          {/*
-            <DevTools />
-          */}
           
+            <DevTools />
+
         </div>
       </Provider>
     );

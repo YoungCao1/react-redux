@@ -1,4 +1,4 @@
-# FreeWork example
+# FreeWorkBoot
 
 ## Running Example
 
@@ -8,7 +8,7 @@ First, clone the project:
 git clone https://github.com/VonCheng/ReactFreework.git
 ```
 
-Then, Run `npm install` in the root folder:
+Then, run `npm install` in the root folder:
 
 ```
 npm install

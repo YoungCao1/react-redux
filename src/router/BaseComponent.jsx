@@ -16,7 +16,7 @@ Function.prototype.getName = function () {
  * @param {*表述信息} descriptor
  */
 
-export const BaseParentRouteConnent = (Target, name, descriptor) => (
+export const BaseParentRouteConnect = (Target, name, descriptor) => (
         class extends Component {
                 constructor(props) {
                     super(props);
@@ -69,7 +69,7 @@ export const BaseParentRouteConnent = (Target, name, descriptor) => (
  * @param {*目标组件} Comp
  * @param {*子集名称} childrenName
  */
-export const BaseSubRouteConnent = (Comp, childrenName) => (class extends Component {
+export const BaseSubRouteConnect = (Comp, childrenName) => (class extends Component {
     constructor(props) {
         super(props);
     }

@@ -19,14 +19,13 @@ export default class Counter extends Component {
       // console.log(this.props)
   }
   render() {
-    const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, redirect} = this.props;
+    const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, tabBarLocations} = this.props;
     
     return (
       <div style={{color: color}}>
         Clicked: {counter} times
-        baccadsfasdf
         <button onClick={increment}>+</button>
-        {' '}
+        {tabBarLocations}
         <button onClick={decrement}>-</button>
         {' '}
         <button onClick={incrementIfOdd}>Increment if odd</button>

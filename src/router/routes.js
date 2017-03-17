@@ -11,8 +11,9 @@ const transformConfig = (routes) => {
       }
       if (route.component) {
           route.component = require(`../pages/${route.component}`);
+
           if(route.indexRoute) {
-            route.indexRoute.onEnter = (nextState, replace) => replace(route.indexRoute.redirect) 
+            route.indexRoute.onEnter = (nextState, replace) => replace({pathname: route.indexRoute.redirect, state:{mark: route.indexRoute.mark?route.indexRoute.mark:false}}) 
           }
       }
     })
@@ -40,7 +41,7 @@ export default class RouterTree extends Component {
     render() {
       const {history} = this.props;
         return (
-            <Router  routes={transformConfig(routerConfig)} history={history} />
+            <Router routes={transformConfig(routerConfig)} history={history} />
         );
     }
 }

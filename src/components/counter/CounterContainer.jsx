@@ -18,8 +18,7 @@ function select(state) {
   return {
     counter: state.counter,
     color: state.changeColor,
-    redirect: state.redirect
-
+    tabBarLocations: state.tabBarLocations
   };
 }
 export default connect(select)(CounterApp);

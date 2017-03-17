@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BaseSubRouteConnent} from '../router/BaseComponent';
+import {BaseSubRouteConnect} from '../router/BaseComponent';
 import {Table} from 'antd';
 class Tacos extends Component {
     render() {
@@ -40,5 +40,5 @@ class Tacos extends Component {
         );
     }
 }
-module.exports = BaseSubRouteConnent(Tacos, 'thirdChildren');
+module.exports = BaseSubRouteConnect(Tacos, 'thirdChildren');
 // export default Tacos;
