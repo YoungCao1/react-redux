@@ -1,6 +1,7 @@
 import { TABBAR_INCREMENT, TABBAR_DECREMENT } from '../constants/ActionTypes';
+import {initializationLocations} from '../router/routerConfig';
 
-export default (state=[], action) => {
+export default (state=initializationLocations?initializationLocations.concat():[], action) => {
     switch (action.type) {
         case TABBAR_INCREMENT: {
             for (var i = 0; i < state.length; i++) {

@@ -12,10 +12,17 @@ class TabBar extends Component {
             if (routing.locationBeforeTransitions&&routing.locationBeforeTransitions.state&&routing.locationBeforeTransitions.state.mark&&(routing.locationBeforeTransitions.state.mark==location.state.mark)) {
                 active = 'tabbar-active';
             }
-            return <span className={`tabbar-cell ${active}`} key={location.state.mark}>
+            if (i == 0) {
+                return <span className={`tabbar-cell ${active}`} key={location.state.mark}>
+                        <NavLink to={location}>{location.state.mark}</NavLink>
+                    </span>
+            } else {
+                return <span className={`tabbar-cell ${active}`} key={location.state.mark}>
                         <NavLink to={location}>{location.state.mark}</NavLink>
                         <i className="fa fa-close" onClick={()=>tabBarDecrementAndRedirect(location)}></i>
                    </span>
+            }
+            
         }
             
         ))

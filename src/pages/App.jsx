@@ -9,7 +9,6 @@ import { DatePicker ,Button} from 'antd';
 @BaseParentRouteConnect
 class App extends Component {
   render() {
-    const {dispatch} = this.props;
     return (
       <div className="app-container">
           <IndexHeader />

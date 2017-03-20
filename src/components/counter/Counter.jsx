@@ -16,9 +16,10 @@ export default class Counter extends Component {
       //     type: 'INCREMENT_COUNTER'
       // })
       // console.log(this.props)
+      // this.props.dispatch(push('/cart'))
   }
   render() {
-    const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, tabBarLocations} = this.props;
+    const { increment, incrementIfOdd, decrement, counter , color, greenColor, yellowColor, tabBarLocations, dispatch} = this.props;
     
     return (
       <div style={{color: color}}>

@@ -3,14 +3,13 @@ export const routerConfig = [{
   component: 'App',
   indexRoute: {
     redirect: '/cart',
-    mark: '首页'
+    state: {
+      mark: '首页'
+    }
   },
   childRoutes: [{
     path: '/tacos',
     component: "Tacos",
-    state: {
-      mark: 'tab'
-    },
     childRoutes: [{
       path: '/tacos/bus',
       component: 'Bus'
@@ -28,4 +27,10 @@ export const routerConfig = [{
       mark: '首页'
     }
   }]
+}]
+export const initializationLocations = [{
+  pathname: '/cart',
+  state:{
+    mark: '首页'
+  }
 }]

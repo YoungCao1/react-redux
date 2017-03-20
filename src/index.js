@@ -11,14 +11,17 @@ import {greenColor} from './actions/CounterActions';
 import { routerConfig } from './router/routerConfig';
 const store = configureStore();
 
-const history = syncHistoryWithStore(createHistory({
-  forceRefresh: false
-}), store);
+const history = syncHistoryWithStore(browserHistory, store);
 
+// const history = syncHistoryWithStore(createHistory({
+//   forceRefresh: false
+// }), store);
 
-// history.listen(location=>{
-// })
-
+history.listen(location=>{
+  if (location.state&&location.state.mark) {
+    store.dispatch(tabBarIncrement(location))
+  }
+})
 
 render(
   <AppContainer>

@@ -69,6 +69,7 @@ export default class Navbar extends Component {
                                     <ul className="submenu" >
 
                                         <li  className="singleLine"><NavLink to={{pathname: '/tacos/bus', search: '?name=chengpu', state: { mark: "汽车" }}} onClick={this.clickHref} className="jumpNavlist"> 汽车 </NavLink> </li>
+                                        <li  className="singleLine"><NavLink to={{pathname: '/tacos', state: { mark: "公交车" }}} onClick={this.clickHref} className="jumpNavlist"> 公交车 </NavLink> </li>
                                         <li  className="singleLine"><NavLink to={{pathname: '/', state: { mark: false }}} onClick={this.clickHref} className="jumpNavlist"> 首页 </NavLink> </li>
                                     </ul>
                                     <div className="dashLine"></div>
