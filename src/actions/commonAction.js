@@ -1,31 +1,20 @@
-import {
-  TABBAR_INCREMENT,
-  TABBAR_DECREMENT
-} from '../constants/ActionTypes';
-import {
-  routerMiddleware,
-  push
-} from 'react-router-redux'
+import {TABBAR_INCREMENT, TABBAR_DECREMENT} from '../constants/ActionTypes';
+import {routerMiddleware, push, replace} from 'react-router-redux'
 
 /**
  * 新增头部导航标签
- * @param {*当前历史记录} currentLocation 
+ * @param {*当前历史记录} currentLocation
  */
 export function tabBarIncrement(currentLocation) {
-  return {
-    type: TABBAR_INCREMENT,
-    currentLocation: currentLocation
-  };
+  return {type: TABBAR_INCREMENT, currentLocation: currentLocation};
 }
 /**
  * 删除头部导航标签
- * @param {*当前历史记录} currentLocation 
+ * @param {*当前历史记录} currentLocation
  */
 export function tabBarDecrementAndRedirect(currentLocation) {
   return (dispatch, getState) => {
-    const {
-      tabBarLocations
-    } = getState();
+    const {tabBarLocations} = getState();
     if (tabBarLocations.length > 1) {
       for (var i = 0; i < tabBarLocations.length; i++) {
         var location = tabBarLocations[i];
@@ -44,19 +33,21 @@ export function tabBarDecrementAndRedirect(currentLocation) {
 }
 /**
  * 删除头部导航标签
- * @param {*当前历史记录} currentLocation 
+ * @param {*当前历史记录} currentLocation
  */
 export function tabBarDecrement(currentLocation) {
-  return {
-    type: TABBAR_DECREMENT,
-    currentLocation: currentLocation
-  }
+  return {type: TABBAR_DECREMENT, currentLocation: currentLocation}
 }
 /**
  * 重定向
- * @param {*定向地址} location 
+ * @param {*定向地址} location
  */
 export function redirect(location) {
+  return (dispatch) => {
+    dispatch(replace(location));
+  };
+}
+export function linkTo(location) {
   return (dispatch) => {
     dispatch(push(location));
   };

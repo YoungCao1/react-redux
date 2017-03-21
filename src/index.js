@@ -16,7 +16,6 @@ const history = syncHistoryWithStore(browserHistory, store);
 // const history = syncHistoryWithStore(createHistory({
 //   forceRefresh: false
 // }), store);
-
 history.listen(location=>{
   if (location.state&&location.state.mark) {
     store.dispatch(tabBarIncrement(location))
